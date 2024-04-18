@@ -15,7 +15,9 @@ function validateForm(event) {
     const birthdate = document.getElementById("birthdate");
 
     
-    checkEmail();
+    if (!checkEmail()) {
+        return; 
+    }
 
    
     document.getElementById("registerPage").submit();
@@ -27,17 +29,18 @@ const checkEmail = () => {
     
     if (!isRequired(emailInput)) {
         alert('Email is required.');
-        return;
+        return false;
     }
 
     
     if (!isEmailValid(emailInput)) {
         alert('Please enter a valid email address.');
-        return;
+        return false;
     }
 
     
     alert('Email is valid.');
+    return true;
 };
 
 const isRequired = (value) => {
