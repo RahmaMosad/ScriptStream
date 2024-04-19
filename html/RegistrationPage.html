@@ -5,53 +5,45 @@
    <link rel="stylesheet" href="../css//style.css">
   <head>
    <title>ScriptStream|Registeration</title>
+   <script defer src="../js/script.js"></script>
 </head>
 <body>
-<form id="registerPage" action="HomePage.html" >
-   <h2>Sign Up</h2>
-<fieldset>
-    <legend>Personal Information</legend>
-    <div class="form-field">
+     <form action="HomePage.html" >
+        <h2>Sign Up</h2>
       <label for="fname">First Name:</label>
       <input type="text" id="fname" required>
-  </div>
-  <div class="form-field">
+  
       <label for="lname">Last Name:</label>
       <input type="text" id="lname" required>
-  </div>
-  <div class="form-field">
+  
       <label for="email">Email:</label>
       <input type="email" id="email" placeholder="email" required>
-  </div>
-  <div class="password">
+      <div class="email error"></div>
+  
      <label for="password" >Password:</label>
       <input type="password" placeholder="Password" type="hidden" type="range" minlength="10" maxlength="15"
-       id="password" required>    
-  </div>
-  <div class="gender">
+       id="password" required>
+      <div class="password error"></div>    
+     
    <label>Gender:</label>
    <input type="radio" id="female" name="female">
     <label for="female">Female</label>
    <input type="radio" id="male" name="female"> 
     <label for="male">Male</label>
-  </div>
-  <div class="birthdate">
+
    <label>Select your birthdate:</label>
     <input type="date">
-  </div>
-   <button type="submit" id="saveButton">Save</button>
+  
+   <button>Sign Up</button>
   <div class="registerCheck"><input type="checkbox" id="Registeration">
    <label for="Registeration"> Remember Me</label>
   </div>
-</fieldset>
-<hr>
-<div class="already account"> 
- <span>Already have an account?
+      <hr>
+   <div class="already account"> 
+      <span>Already have an account?
     <a href="LoginPage.html">Log in</a> 
- </span>
-</div>
-</form>
-
-<script src="../js/script.js"></script>
+    </span>
+   </div>
+    </form>
 </body>
 </html>
